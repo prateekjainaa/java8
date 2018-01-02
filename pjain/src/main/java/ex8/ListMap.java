@@ -2,6 +2,7 @@ package ex8;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 
@@ -30,7 +31,13 @@ public class ListMap {
 	}
 	
 	public static void main(String[] args) {
-
+		
+		Optional<String> gender = Optional.of("MALE");
+		//Filter on Optional
+        System.out.println(gender.filter(g -> g.equals("male"))); //Optional.empty
+        System.out.println(gender.filter(g -> g.equalsIgnoreCase("MALE"))); //Optional[MALE]
+        
+		
 	}
 
 }
